@@ -55,6 +55,7 @@ def create_bug(summary, token):
         print("Create failed:", r.text)
         return None
 
+    print(r.text)
     bug_id = r.json()["id"]
     print("Created bug:", bug_id)
     return bug_id
